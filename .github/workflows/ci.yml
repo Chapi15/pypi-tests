@@ -28,5 +28,5 @@ jobs:
     #   run: pytest
 
     - name: Build Package
-      run: python -m ./dummy_package/ --sdist --wheel --outdir ./dist
+      run: python -m build ./dummy_package/ --sdist --wheel --outdir ./dist
     
