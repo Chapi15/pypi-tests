@@ -1,0 +1,32 @@
+name: Dummy Python Package
+
+on: 
+  push:
+    branches: [ 'dev' ]
+  pull_request: 
+    branches: [ 'dev' ]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+    - uses: actions/checkout@v3
+
+    - name: Set Up Python
+    - uses: actions/setup-python@v3
+      with: 
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: pytest
+
+    - name: Build Package
+        run: python setup.py sdist bdist_wheel
+    
