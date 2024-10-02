@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dummy_package"
+version = "0.0.1"
+description = "A sample Python package for testing CI pipeline"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Alfonso Rodríguez Ongay", email = "alfonso.ro.96@gmail.com" }]
+dependencies = ["prefect==2.20.6",
+                "databricks-connect==14.3.*"
+]
+
+[project.scripts]
+dummy_package = "dummy_package.src.dummy_package.module:main"
