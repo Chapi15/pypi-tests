@@ -7,15 +7,15 @@ on:
     branches: [ 'dev' ]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repo
     - uses: actions/checkout@v3
+    # - name: Checkout Repo
 
-    - name: Set Up Python
     - uses: actions/setup-python@v3
+    # - name: Set Up Python
       with: 
         python-version: '3.10'
 
