@@ -1,0 +1,4 @@
+setuptools
+wheel
+prefect==2.20.4
+databricks-connect==14.*
